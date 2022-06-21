@@ -1,0 +1,23 @@
+FUNCTION add :
+PARAM temp
+t3 := *temp
+o1 := t3 + #0
+t5 := *temp
+o2 := t5 + #4
+t6 := *o1
+t7 := *o2
+t1 := t6 + t7
+RETURN t1
+FUNCTION main :
+DEC op 8
+t9 := &op
+o1 := t9 + #0
+*o1 := #1
+t11 := &op
+o2 := t11 + #4
+*o2 := #2
+ARG op
+t12 := CALL add
+n := t12
+WRITE n
+RETURN #0
